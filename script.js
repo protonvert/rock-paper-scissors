@@ -79,7 +79,9 @@ function playRound(playerSelection, computerSelection){
 // this one to play a 5 round game that keeps score and reports
 // a winner/loser at end
 
-function game(playerSelection){
+function game(){
+
+    playerSelection = prompt('Select rock, paper, or scissors');
 
     computerWins = 0;
     playerWins = 0;
@@ -87,9 +89,8 @@ function game(playerSelection){
     for (let i = 0; i < 5; i++){
         
         playRound(playerSelection, getComputerChoice());
-
         console.log(`Computer: ${computerWins} | Player: ${playerWins}`);
-        
+
     }
 
     if (playerWins > computerWins) {
@@ -107,4 +108,6 @@ function game(playerSelection){
 }
 
 
+
 // console.log() results at of eachh round and winner at end
+

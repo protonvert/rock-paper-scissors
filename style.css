@@ -4,44 +4,57 @@
     margin: 0;
 }
 
-.content__instructions {
+html {
+    background-color: #DADED4;
+}
+
+.content {
     max-width: 80%;
     margin: auto;
     text-align: center;
     /* border: 3px solid black; */
-}
-
-.content__instructions > * {
-    margin: 2rem;
+    background-color: #DADED4;
+    border-radius: 30px;
+    padding: 20px;
 }
 
 h1 {
     font-size: 2.5rem;
+    color: #3C403D;
 }
 
 h2 {
     font-size: 2rem;
-}
-
-p {
-    font-size: 1rem;
+    color: #3C403D;
 }
 
 .content__instructions__paragraph {
-    width: 80ch;
-    margin: auto;
+    max-width: 80ch;
+    margin: 0.5rem auto;
+    color: #3C403D;
+}
+
+.content__instructions__header {
+    margin:20rem 0px 0px 0px;
 }
 
 .content__button {
 
-    padding: 10px 20px;
+    padding: 20px;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     /* border: 3px solid black; */
     gap: 15px;
+    background-color: #DADED4;
+    border: 0;
     
+}
+
+.content__button:hover {
+    background-color: #A3BCB6;
+    border-radius: 15px;
 }
 
 .button-desc {
@@ -61,8 +74,8 @@ p {
 .content__buttons {
     display: flex;
     justify-content: center;
-    gap: 10rem;
-    padding: 6rem;
+    gap: 6rem;
+    /* padding: 6rem; */
     flex-wrap: wrap;
 }
 

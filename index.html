@@ -5,20 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Rock Paper Scissors!</title>
     
 </head>
+
 <body>
-    <section class="main__middle">
-        <h1 class="large-header">Console Rock, Paper, Scissors!</h1>
-        <div class="main__middle__content">
-            <h2>How to Play:</h2>
-            <p>
-                To begin playing, open the dev tools console. Enter the following command: <br>game('rock'/'paper'/'scissors')<br>. This will play five rounds 
-                using your selected guess. At the end, it will display the results for each of the 5 rounds, as well as the winner of the match.
+
+    <section class="content">
+
+        <div class="content__instructions">
+
+            <h1 id="content__hero-header">Rock, Paper, Scissors!</h1>
+        
+            <h2 class="content__instructions__header">How to Play:</h2>
+
+            <p class="content__instructions__paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio consectetur modi temporibus culpa pariatur repudiandae iusto esse provident laudantium.
             </p>
+    
         </div>
+
+
+        <div class="content content__buttons">
+
+            <div class="content__button__div rock_div">
+                
+                <button class="content__button rock__button">
+                    
+                    <img src="rock.png" alt="rock" class="item-img" id="rock-img">
+                    <span class="button-desc">rock</span>
+
+                </button>
+            </div>
+            <div class="content__button__div paper__button">
+                
+                <button class="content__button paper__button">
+                    
+                    <img src="paper.png" alt="paper" class="item-img" id="paper-img">
+                    <span class="button-desc">paper</span>
+
+                </button>
+
+            </div>
+            <div class="content__button__div scissors__button">
+
+                <button class="content__button paper__button">
+                    
+                    <img src="scissors.png" alt="scissors" class="item-img" id="scissors-img">
+                    <span class="button-desc">scissors</span>
+
+                </button>
+
+
+            </div>
+
+        </div>
+    
+        
+
     </section>
+
+    
 </body>
 </html>

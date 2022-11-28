@@ -1,3 +1,3 @@
 # rock-paper-scissors
 
-Basic rock paper scissors javascript test utilizing the chrome developer console. Nothing to see here... yet.
+Basic rock paper scissors game. This is an upgraded version of my console edition utilizing DOM manipulation.

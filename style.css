@@ -1,45 +1,68 @@
-
-html {
-    background-image: url("bg.jpg");
-    background-color: black;
-    color: rgb(229, 229, 229);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 5px;
+    margin: 0;
 }
 
-.main__middle {
-    max-width: 40%;
+.content__instructions {
+    max-width: 80%;
+    margin: auto;
     text-align: center;
-    margin: 32vh auto;
-    padding: 30px;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.9px);
-    -webkit-backdrop-filter: blur(0.9px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.184));
-    
+    /* border: 3px solid black; */
 }
 
-
+.content__instructions > * {
+    margin: 2rem;
+}
 
 h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
-/* .main__middle__content {
-    margin: auto 0
-} */
+p {
+    font-size: 1rem;
+}
+
+.content__instructions__paragraph {
+    width: 80ch;
+    margin: auto;
+}
+
+.content__button {
+
+    padding: 10px 20px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid black; */
+    gap: 15px;
+    
+}
+
+.button-desc {
+    /* border: 3px solid black; */
+}
+
+.item-img {
+    height: 200px;
+    width: 200px;
+}
+
+.content.content__buttons{
+    max-width: 80%;
+    margin: auto;
+}
+
+.content__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    padding: 6rem;
+    flex-wrap: wrap;
+}
+

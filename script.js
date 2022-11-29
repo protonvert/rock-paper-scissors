@@ -1,9 +1,13 @@
-// rock paper scissors game will be completely playable from console
-
 let playerWins = 0;
 let computerWins = 0;
-let winner;
 let result = "";
+const rockButton = document.getElementById('rock__button');
+const paperButton = document.getElementById('paper__button');
+const scissorsButton = document.getElementById('scissors__button');
+const roundResultElement = document.querySelector('.content__round__result');
+const content = document.querySelector('.content');
+const scoreDiv = document.createElement('div');
+const scoreText = document.createElement('span');
 
 let roundResultFinal;
 
@@ -14,39 +18,36 @@ function generateRandom(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-// create function getComputerChoice - randomly return either rock paper or scissors
-
-function getComputerChoice() {
+function getComputerChoice() {               // getComputerChoice - randomly return either rock paper or scissors
 
     let randomSelect = generateRandom(1, 4); // generate number between 1 - 3    
 
     switch (randomSelect) {
         case 1:
-            result = "rock";
+            result = "Rock";
             break;
 
         case 2:
-            result = "paper";
+            result = "Paper";
             break;
         
         case 3:
-            result = "scissors";
+            result = "Scissors";
             break;
     }
 
     
 
-    return result.charAt(0).toUpperCase() + result.slice(1);
+    return result;
 
 }
-
 
 function playRound(playerSelection, computerSelection){
 
     // list possible player win scenarios
-    if ((playerSelection == "Rock" && computerSelection == "scissors") ||
-        (playerSelection == "Paper" && computerSelection == "rock") ||
-        (playerSelection == "Scissors" && computerSelection == "paper")) {
+    if ((playerSelection == "Rock" && computerSelection == "Scissors") ||
+        (playerSelection == "Paper" && computerSelection == "Rock") ||
+        (playerSelection == "Scissors" && computerSelection == "Paper")) {
 
             playerWins++;
             roundResult = `Player wins this round! Player selected: ${playerSelection} | Computer selected: ${computerSelection}`;
@@ -65,14 +66,13 @@ function playRound(playerSelection, computerSelection){
         roundResult = `Computer wins this round! Player selected: ${playerSelection} | Computer selected: ${computerSelection}`;
     }
 
+    scoreInfo = `player wins: ${playerWins}, computer wins: ${computerWins}`;
     return roundResult;
 
 }
 
-const rockButton = document.getElementById('rock__button');
-const paperButton = document.getElementById('paper__button');
-const scissorsButton = document.getElementById('scissors__button');
-const roundResultElement = document.querySelector('.content__round__result');
+content.appendChild(scoreDiv);
+scoreDiv.appendChild(scoreText);
 
 rockButton.addEventListener('click', () => {
     
@@ -93,4 +93,5 @@ scissorsButton.addEventListener('click', () => {
 function updateResult() {
     roundResultElement.innerText = roundResultFinal;
     console.log(roundResultElement.innerText);
+    scoreText.innerHTML = scoreInfo;
 }
